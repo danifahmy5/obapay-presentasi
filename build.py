@@ -51,7 +51,28 @@ def build():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>From Manual to Smart Pharmacy — Presentasi ObaPay</title>
+    <title>ObaPay — From Manual to Smart Pharmacy</title>
+    <meta name="description" content="Kenali ObaPay: transformasi pelayanan farmasi dan pengelolaan persediaan obat menjadi lebih terintegrasi, otomatis, dan efisien.">
+    <link rel="canonical" href="https://danifahmy5.github.io/obapay-presentasi/">
+
+    <!-- Social sharing metadata: rendered statically for link-preview crawlers. -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Presentasi ObaPay">
+    <meta property="og:title" content="ObaPay — From Manual to Smart Pharmacy">
+    <meta property="og:description" content="Kenali ObaPay: transformasi pelayanan farmasi dan pengelolaan persediaan obat menjadi lebih terintegrasi, otomatis, dan efisien.">
+    <meta property="og:url" content="https://danifahmy5.github.io/obapay-presentasi/">
+    <meta property="og:image" content="https://danifahmy5.github.io/obapay-presentasi/screenshots/slide01-dashboard-overview.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1911">
+    <meta property="og:image:height" content="978">
+    <meta property="og:image:alt" content="Tampilan dashboard ObaPay untuk pengelolaan farmasi dan persediaan obat.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ObaPay — From Manual to Smart Pharmacy">
+    <meta name="twitter:description" content="Kenali ObaPay: transformasi pelayanan farmasi dan pengelolaan persediaan obat menjadi lebih terintegrasi, otomatis, dan efisien.">
+    <meta name="twitter:image" content="https://danifahmy5.github.io/obapay-presentasi/screenshots/slide01-dashboard-overview.png">
+    <meta name="twitter:image:alt" content="Tampilan dashboard ObaPay untuk pengelolaan farmasi dan persediaan obat.">
+
     <!-- Google Fonts: Space Grotesk (PZN Display), Plus Jakarta Sans (Body), IBM Plex Mono (Code/Badges) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

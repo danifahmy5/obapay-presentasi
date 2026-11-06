@@ -140,7 +140,17 @@ Presentasi ini **100% kompatibel dengan GitHub Pages** karena hasil akhirnya ada
 Repository: https://github.com/danifahmy5/obapay-presentasi
 Website: https://danifahmy5.github.io/obapay-presentasi/
 
-Edit file di `slides/`, `components/`, `css/`, `js/`, atau `screenshots/`.
+### 1. Buka folder repository presentasi
+
+```bash
+cd /home/rosyid/project/obapay-presentasi
+```
+
+Semua pembaruan presentasi dilakukan di folder ini. Folder `ppt` di repository aplikasi ObaPay hanya berisi petunjuk lokasi baru.
+
+### 2. Edit materi dan lihat hasilnya
+
+Edit materi di `slides/`, komponen di `components/`, tampilan di `css/`, perilaku di `js/`, atau gambar di `screenshots/`.
 Untuk pratinjau lokal:
 
 ```bash
@@ -149,8 +159,10 @@ python3 -m http.server 8080
 ```
 
 Buka http://localhost:8080/presentasi.html.
+Setelah mengedit slide atau komponen, jalankan kembali `python3 build.py`, lalu muat ulang halaman browser.
+Hentikan server dengan `Ctrl+C`, atau gunakan terminal lain untuk menjalankan perintah Git berikut.
 
-Untuk menerbitkan perubahan:
+### 3. Publikasikan perubahan
 
 ```bash
 git add .
@@ -158,7 +170,9 @@ git commit -m "docs: perbarui presentasi"
 git push origin main
 ```
 
-GitHub Actions membangun HTML dan menerbitkan situs secara otomatis.
+GitHub Actions membangun HTML dan menerbitkan situs secara otomatis setelah push ke branch `main`.
+Pantau proses di [tab Actions](https://github.com/danifahmy5/obapay-presentasi/actions).
+Setelah workflow berhasil (centang hijau), buka [presentasi online](https://danifahmy5.github.io/obapay-presentasi/) dan muat ulang halaman untuk melihat perubahan.
 `presentasi.html` adalah hasil build lokal dan tidak perlu di-commit.
 Repository ini hanya memuat presentasi; aplikasi ObaPay tetap berada di repository privat terpisah.
 Tautan demo localhost di presentasi membutuhkan aplikasi ObaPay yang berjalan di komputer pengunjung.
