@@ -52,6 +52,10 @@ def build():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ObaPay — From Manual to Smart Pharmacy</title>
+    <link rel="apple-touch-icon" sizes="192x192" href="icons/pwa-192x192.png">
+    <link rel="icon" type="image/svg+xml" href="icons/pwa-512x512.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/pwa-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/pwa-192x192.png">
     <meta name="description" content="Kenali ObaPay: transformasi pelayanan farmasi dan pengelolaan persediaan obat menjadi lebih terintegrasi, otomatis, dan efisien.">
     <link rel="canonical" href="https://danifahmy5.github.io/obapay-presentasi/">
 
