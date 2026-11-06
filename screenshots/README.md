@@ -59,7 +59,7 @@ Anda dapat menyematkan tangkapan layar (screenshot) aplikasi **ObaPay** ke dalam
 | **Slide 22** | `slide21-resep-limit-35rb.png` | `Laporan → Penjualan → Evaluasi Resep BPJS & Obat Kronis` | `/reports/sales/doctor-prescription-limits` | Evaluasi kepatuhan nilai nominal resep BPJS (plafon Rp 35rb), pemisahan tagihan kronis vs non-kronis, dan rekapitulasi over-budget per DPJP. |
 | **Slide 23** | `slide22-kepatuhan-formularium.png` | `Laporan → Penjualan → Penjualan Obat Formularium` | `/reports/sales/formularium-products` | Monitoring utilisasi formularium (F1, F2, F3) pada 5 gudang aktif, rekap 35 obat (266 terjual), dan ranking volume pemakaian obat. |
 | **Slide 24** | `slide23-respon-time-spm.png` | `Laporan → Pelayanan → Respon Time Antrian` | `/reports/queues/response-time` | Pencapaian SPM Kemenkes (76.2%), durasi granular per tahapan alur resep (menunggu, racik, cek, serah), dan analisis titik *bottleneck*. |
-| **Slide 25** | `slide24-ddd-antibiotika.png` | `Master Data Obat (DDD) & Laporan PPRA` | `/medicines` | Master nilai Defined Daily Dose (DDD) WHO per satuan obat dan laporan kuantitatif konsumsi antibiotik per kategori AWaRe untuk program PPRA & akreditasi Starkes. |
+| **Slide 25** | `slide24-ddd-antibiotika.png` | `Laporan → Penjualan → DDD Antibiotika` | `/reports/sales/antibiotic-ddd` | Laporan kuantitatif konsumsi antibiotik rawat inap metode WHO (DDD/100 hari rawat), agregat LOS, dan rincian per obat untuk program PPRA & akreditasi Starkes. |
 
 ---
 

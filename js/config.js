@@ -30,7 +30,7 @@ const PRESENTER_NOTES = {
     22: "Laporan Resep BPJS & Evaluasi Plafon Obat Kronis: Mengevaluasi kepatuhan nilai nominal resep BPJS terhadap plafon anjuran Rp 35.000 dengan memisahkan tagihan obat kronis (Rp 2,02 Jt) dan non-kronis (Rp 6,98 Jt). Dashboard mendeteksi 75 resep over-plafon dengan total kelebihan biaya Rp 4,36 Jt serta merangkum performa peresepan per DPJP untuk kendali mutu INA-CBGs.",
     23: "Laporan Kepatuhan & Penjualan Obat Formularium: Contoh periode 1–30 November 2026 dengan kategori BPJS, semua formularium, dan 5 gudang menampilkan 20 jenis obat serta 180 transaksi obat. Panel kepatuhan menggunakan rumus (F1 + F3) / (F1 + F3 + non formularium): (72 + 72) / (72 + 72 + 9) = 94,12%. Total 153 pada panel kepatuhan berbeda dari ringkasan 180 transaksi obat. Panel kepatuhan mengikuti periode dan kategori penjualan serta mencakup semua gudang; non formularium mengikuti kategori kunjungan dan mencakup pengajuan semua status. Tabel merinci kode, nama, formularium, dan transaksi tiap obat, dilengkapi cetak dan ekspor Excel.",
     24: "Laporan Response Time Antrian Pasien & SPM: Mengukur kepatuhan SPM Kemenkes dengan rata-rata total waktu 35.4 menit. Resep non-racik tercapai dalam 24.3 menit (target ≤ 30 menit, kepatuhan 83.3%) dan racikan 50.1 menit (target ≤ 60 menit, kepatuhan 66.7%), lengkap dengan analisis titik bottleneck di ruang peracikan.",
-    25: "Evaluasi Penggunaan Antibiotik (Metode WHO ATC/DDD & PPRA): Menguantifikasi penggunaan antibiotik rumah sakit menggunakan standar baku WHO Defined Daily Dose (DDD) per 100 hari rawat inap (patient-days). Mendukung stratifikasi kategori AWaRe (Access, Watch, Reserve) dan program pengendalian resistensi antimikroba (PPRA) untuk mencegah lonjakan kuman kebal obat dan memenuhi indikator akreditasi Starkes.",
+    25: "Laporan DDD Antibiotika: Laporan ini membantu rumah sakit memantau seberapa banyak antibiotik digunakan oleh pasien rawat inap agar pemakaiannya tetap bijak dan aman. Nilai pada layar dihitung otomatis oleh sistem: (1) Mengambil pasien yang pulang pada periode yang dipilih, yaitu 15 pasien dengan total 120 hari rawat inap (LOS) di mana lama rawat dihitung 1 kali per pasien agar tidak berlipat ganda; (2) Menghitung jumlah obat bersih yang dikonsumsi setelah dikurangi retur; (3) Nilai 25,62 per 100 hari rawat berarti dalam setiap 100 hari pasien menginap, rata-rata ada 25–26 hari pasien mengonsumsi dosis harian antibiotik. Informasi ini siap dicetak atau diekspor ke Excel untuk laporan mutu dan komite PPRA.",
     26: "Integrasi ERM & Single Sign-On (SSO): Dokter cukup mengklik tombol 'Resep' pada ERM, sistem mengirimkan identitas dokter, pasien, dan kunjungan secara aman. ObaPay memvalidasi akses dan menyinkronkan data secara otomatis, lalu dokter langsung diarahkan ke form E-Resep dengan konteks yang sudah tersedia tanpa perlu login ulang. Solusi ini memberikan manfaat utama Single Sign-On (SSO), Zero Double Entry, Patient Context Safety, dan Seamless Workflow untuk mempercepat pelayanan rawat jalan.",
     27: "Penjelasan API Peresepan (Interoperabilitas Dua Arah): ObaPay menyediakan konektivitas API yang memungkinkan ERM menyinkronkan data resep lengkap dengan obat dan racikan, memantau progres status pelayanan farmasi secara real-time, mengelola duplikasi resep serta pembatalan dengan otorisasi aman, dan mengakses katalog master obat beserta sisa stok dan informasi DDD. Dilengkapi keamanan RESTful API autentikasi Laravel Sanctum, format data JSON terstruktur, dan arsitektur siap interoperabilitas FHIR / SATUSEHAT.",
     28: "“Mari kita diskusikan bersama: di titik mana proses saat ini paling sering mengalami hambatan, data apa yang paling sulit diperoleh dengan cepat, dan proses apa yang paling layak menjadi prioritas transformasi digital kita?”"
@@ -366,13 +366,13 @@ const SCREENSHOT_CONFIG = [
         "key": "slide24-ddd-antibiotika",
         "slide": 25,
         "file": "slide24-ddd-antibiotika.png",
-        "title": "Evaluasi DDD Antibiotika (Metode WHO & PPRA)",
-        "menu": "Master Data Obat (DDD) & Laporan PPRA",
-        "route": "/medicines",
+        "title": "Laporan DDD Antibiotika (Metode WHO & PPRA)",
+        "menu": "Laporan → Penjualan → DDD Antibiotika",
+        "route": "/reports/sales/antibiotic-ddd",
         "guideBadge": "PPRA & WHO DDD",
         "guideIcon": "pill",
-        "guideTarget": "Master DDD Antibiotik & Evaluasi Konsumsi PPRA",
-        "guideInst": "Ambil screenshot master data obat dengan kolom nilai DDD (Defined Daily Dose) WHO dan laporan konsumsi antibiotik per kategori AWaRe."
+        "guideTarget": "Laporan DDD Antibiotika Rawat Inap (Metode WHO)",
+        "guideInst": "Tampilan laporan DDD Antibiotika dengan filter periode tanggal pulang, total kunjungan (15), total LOS (120 hari), DDD per 100 hari rawat (25,62), dan tabel per item obat."
     }
 ];
 
