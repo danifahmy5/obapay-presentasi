@@ -1,0 +1,63 @@
+    <!-- Bottom Controls Footer -->
+    <footer class="pzn-footer">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <button class="btn" id="btnPrevSlide" title="Slide Sebelumnya (←)">
+                <span class="icon-svg"><svg>
+                        <use href="#icon-repeat" style="transform: rotate(180deg);"></use>
+                    </svg></span>
+                Sebelumnya
+            </button>
+            <button class="btn btn-primary" id="btnNextSlide" title="Slide Berikutnya (→ / Space)">
+                Berikutnya
+                <span class="icon-svg"><svg>
+                        <use href="#icon-arrow-right"></use>
+                    </svg></span>
+            </button>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <div class="pzn-progress-track">
+                <div class="pzn-progress-fill" id="slideProgressFill"></div>
+            </div>
+            <select id="slideSelectDropdown" class="pzn-select">
+                <option value="1">01 • From Manual to Smart Pharmacy</option>
+                <option value="2">02 • Siklus A: 8 Tahap Pengelolaan Logistik Farmasi</option>
+                <option value="3">03 • Siklus A (1): Perencanaan Kebutuhan (Defecta)</option>
+                <option value="4">04 • Siklus A (2): Penganggaran & Nilai Pembelian</option>
+                <option value="5">05 • Siklus A (3): Pengadaan Obat (Surat Pesanan PO)</option>
+                <option value="6">06 • Siklus A (4): Penerimaan Obat & Faktur Pembelian</option>
+                <option value="7">07 • Siklus A (5): Penyimpanan & Multi-Gudang</option>
+                <option value="8">08 • Siklus A (6): Distribusi & Mutasi Antar Depo</option>
+                <option value="9">09 • Siklus A (7): Pengendalian & Mutu Persediaan</option>
+                <option value="10">10 • Siklus A (8): Penghapusan, Stock Opname & Retur</option>
+                <option value="11">11 • Siklus B: 6 Tahap Pelayanan Obat & Resep</option>
+                <option value="12">12 • Siklus B (1): Penerimaan Resep & E-Resep ERM</option>
+                <option value="13">13 • Siklus B (2): Skrining & 14 Poin Telaah Resep</option>
+                <option value="14">14 • Siklus B (3): Penyiapan Obat & Racikan (E-Tiket)</option>
+                <option value="15">15 • Siklus B (4): Pemeriksaan Akhir (Telaah Obat 5 Tepat)</option>
+                <option value="16">16 • Siklus B (5): Penyerahan Obat & Retur Rawat Inap</option>
+                <option value="17">17 • Siklus B (6): Edukasi Pasien via WhatsApp</option>
+                <option value="18">18 • Ringkasan: 7 Laporan Pilihan & 40+ Jenis Laporan</option>
+                <option value="19">19 • Laporan HPP Farmasi Realtime</option>
+                <option value="20">20 • Laporan Stagnant Stock (Slow Moving)</option>
+                <option value="21">21 • Laporan Death Stock (Stok Mati)</option>
+                <option value="22">22 • Raport Resep > 35rb (Plafon BPJS)</option>
+                <option value="23">23 • Kepatuhan Formularium (INM)</option>
+                <option value="24">24 • Respon Time Farmasi (SPM Waktu Tunggu)</option>
+                <option value="25">25 • DDD Antibiotika (Metode WHO & PPRA)</option>
+                <option value="26">26 • Arsitektur Integrasi: Cara Kerja SSO ERM</option>
+                <option value="27">27 • Penjelasan API Peresepan (REST API E-Resep)</option>
+                <option value="28">28 • Tanya Jawab & Diskusi</option>
+            </select>
+        </div>
+
+        <div>
+            <span style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--color-ink-muted);">
+                Nav: <span class="kbd-pzn">←</span> <span class="kbd-pzn">→</span> | Notes: <span
+                    class="kbd-pzn" onclick="toggleNotesDrawer()" style="cursor: pointer;" title="Klik atau tekan 'N' untuk sembunyikan/tampilkan narasi">N</span> | Laser: <span
+                    class="kbd-pzn" onclick="toggleLaserPointer()" style="cursor: pointer;" title="Klik atau tekan 'L' untuk aktifkan/matikan laser pointer sorotan kursor">L</span> | Zoom: <span
+                    class="kbd-pzn" onclick="zoomIn()" style="cursor: pointer;" title="Perbesar Tampilan (+)">+</span> <span
+                    class="kbd-pzn" onclick="zoomOut()" style="cursor: pointer;" title="Perkecil Tampilan (-)">-</span>
+            </span>
+        </div>
+    </footer>

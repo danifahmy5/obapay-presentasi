@@ -1,0 +1,46 @@
+<div class="slide-content-wrap" data-slide="8">
+    <wave-background variant="4"></wave-background>
+    <slide-top-meta slide="8" badge="Siklus A: Tahap 6 dari 8" icon="repeat" speaker="Logistik Farmasi"></slide-top-meta>
+    <h1 class="slide-heading">Siklus A.6: Distribusi & Transfer Stok Antar Depo</h1>
+    <p class="slide-lead">Penyaluran obat dari Gudang Utama ke Depo Layanan berbasis 2 mode kalkulasi kebutuhan anfra riil dan fleksibilitas alokasi batch.</p>
+
+    <!-- Stage Detail & Screenshot Showcase -->
+    <div class="grid-2col slide-showcase-16x9" style="margin-top: 14px;">
+        <div class="pzn-card pzn-card-bone">
+            <span class="card-tag tag-acid">
+                <span class="icon-svg"><svg>
+                        <use href="#icon-repeat"></use>
+                    </svg></span>
+                Tahap A.6 — Logistik
+            </span>
+            <h3 class="card-title">Distribusi & Transfer Stok Antar Gudang</h3>
+            <div class="card-body-text" style="margin-bottom: 12px; font-size: 0.88rem; line-height: 1.5;">
+                <p style="margin-bottom: 8px;">
+                    <strong>Panel Penentuan Transfer:</strong> Menentukan rute pengiriman (<em>Gudang Utama &rarr; Rawat Jalan</em>), tanggal dokumen, dan periode analisis transaksi pemakaian.
+                </p>
+                <div style="background: var(--color-paper); border-left: 3px solid var(--color-electric); padding: 8px 10px; border-radius: 4px; margin-bottom: 8px;">
+                    <div style="font-weight: 700; color: var(--color-ink); margin-bottom: 4px;">2 Mode Kalkulasi Kebutuhan Anfra:</div>
+                    <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px;">
+                        <li>
+                            <strong>Mode Per Tanggal:</strong> Menghitung pemakaian dalam rentang tanggal penjualan. Data rekomendasi anfra <em>hanya muncul jika transaksi pemakaian lebih banyak dari stok akhir</em> (<code style="font-size: 0.8rem; font-weight: 700;">Keluar &gt; Stok Akhir</code>), memastikan transfer hanya untuk obat yang benar-benar membutuhkan pasokan.
+                        </li>
+                        <li>
+                            <strong>Mode Per Hari:</strong> Menghitung tren riwayat pemakaian pada hari yang sama selama 4 minggu ke belakang dikalikan buffer anfra untuk proyeksi anfra rutin harian secara rasional.
+                        </li>
+                    </ul>
+                </div>
+                <p style="margin-bottom: 0;">
+                    <strong>Alokasi Batch (FEFO / Bebas Pilih Batch):</strong> Fleksibilitas pemilihan alokasi sistematis FEFO (<em>First Expired, First Out</em>) atau <em>Manual</em> untuk memilih batch dan ED tertentu sesuai kondisi rak.
+                </p>
+            </div>
+
+            <div style="background: var(--color-paper); padding: 12px; border-radius: var(--border-radius-sm); font-size: 0.85rem; border: var(--border-width) solid var(--color-ink); box-shadow: var(--shadow-hard-sm); margin-top: auto;">
+                <div><strong>Menu di ObaPay:</strong> <span style="font-family: var(--font-mono);">Stok & Gudang → Transfer Stok → Buat Transfer</span></div>
+                <div style="margin-top: 4px;"><strong>Route URL:</strong> <code style="color: var(--color-electric); font-weight: 700;">/inventory/stock-transfers/create</code></div>
+            </div>
+        </div>
+
+        <!-- Screenshot Window (16:9) -->
+        <screenshot-window key="slide05-a6-distribusi-transfer" class="window-16x9"></screenshot-window>
+    </div>
+</div>

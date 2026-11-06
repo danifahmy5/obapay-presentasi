@@ -1,0 +1,117 @@
+<div class="slide-content-wrap" data-slide="27">
+    <wave-background variant="2"></wave-background>
+    <slide-top-meta slide="27" badge="Interoperabilitas: API Peresepan" icon="file-text" speaker="Arsitektur & Integrasi Sistem"></slide-top-meta>
+    <h1 class="slide-heading">Penjelasan API Peresepan: Interoperabilitas Dua Arah</h1>
+    <p class="slide-lead">Integrasi data E-Resep berbasis REST API Sanctum antara sistem ERM rumah sakit dan ObaPay untuk sinkronisasi resep, monitoring status, dan katalog obat.</p>
+
+    <!-- 4 Fitur Interoperabilitas E-Resep -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px;">
+        <!-- Fitur 1 -->
+        <div class="pzn-card pzn-card-bone" style="padding: 18px 20px; display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span class="card-tag tag-blue" style="margin: 0;">01 &bull; SINKRONISASI</span>
+                <span class="icon-svg" style="width: 22px; height: 22px; color: var(--color-electric);"><svg><use href="#icon-repeat"></use></svg></span>
+            </div>
+            <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--color-ink); margin-bottom: 8px; letter-spacing: -0.01em;">
+                1. Sinkronisasi Resep
+            </h3>
+            <p class="card-body-text" style="font-size: 0.88rem; line-height: 1.5; margin: 0; color: var(--color-ink-soft);">
+                ERM dapat melihat data resep, detail obat, racikan, dan aturan pakai dari ObaPay.
+            </p>
+        </div>
+
+        <!-- Fitur 2 -->
+        <div class="pzn-card pzn-card-bone" style="padding: 18px 20px; display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span class="card-tag tag-acid" style="margin: 0;">02 &bull; MONITORING</span>
+                <span class="icon-svg" style="width: 22px; height: 22px; color: var(--color-ink);"><svg><use href="#icon-activity"></use></svg></span>
+            </div>
+            <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--color-ink); margin-bottom: 8px; letter-spacing: -0.01em;">
+                2. Monitoring Status Farmasi
+            </h3>
+            <p class="card-body-text" style="font-size: 0.88rem; line-height: 1.5; margin: 0; color: var(--color-ink-soft);">
+                Dokter dapat memantau progres pelayanan resep secara real-time, mulai dari telaah hingga obat diserahkan kepada pasien.
+            </p>
+        </div>
+
+        <!-- Fitur 3 -->
+        <div class="pzn-card pzn-card-bone" style="padding: 18px 20px; display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span class="card-tag tag-mint" style="margin: 0;">03 &bull; MANAJEMEN</span>
+                <span class="icon-svg" style="width: 22px; height: 22px; color: var(--color-ink);"><svg><use href="#icon-clipboard-check"></use></svg></span>
+            </div>
+            <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--color-ink); margin-bottom: 8px; letter-spacing: -0.01em;">
+                3. Manajemen Resep
+            </h3>
+            <p class="card-body-text" style="font-size: 0.88rem; line-height: 1.5; margin: 0; color: var(--color-ink-soft);">
+                Mendukung penyalinan resep kunjungan sebelumnya serta pembatalan resep dengan validasi otorisasi.
+            </p>
+        </div>
+
+        <!-- Fitur 4 -->
+        <div class="pzn-card pzn-card-bone" style="padding: 18px 20px; display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span class="card-tag tag-orange" style="margin: 0;">04 &bull; MASTER OBAT</span>
+                <span class="icon-svg" style="width: 22px; height: 22px; color: var(--color-ink);"><svg><use href="#icon-pill"></use></svg></span>
+            </div>
+            <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--color-ink); margin-bottom: 8px; letter-spacing: -0.01em;">
+                4. Integrasi Master Obat
+            </h3>
+            <p class="card-body-text" style="font-size: 0.88rem; line-height: 1.5; margin: 0; color: var(--color-ink-soft);">
+                ERM dapat mengakses katalog obat, ketersediaan stok, status formularium, dan informasi DDD.
+            </p>
+        </div>
+    </div>
+
+    <!-- Section Keamanan & Standarisasi -->
+    <div class="pzn-card" style="margin-top: 18px; padding: 18px 24px; background: var(--color-paper);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="card-tag tag-acid" style="margin: 0; font-size: 0.72rem;">SECURITY &amp; STANDARDS</span>
+                <span style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: var(--color-ink); letter-spacing: -0.01em;">
+                    KEAMANAN &amp; STANDARISASI
+                </span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--color-ink-muted);">
+                REST API • Token Sanctum • FHIR Ready
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px;">
+            <!-- Poin 1 -->
+            <div style="background: var(--color-bone-light); border: var(--border-width) solid var(--color-ink); border-radius: var(--border-radius-sm); padding: 12px 14px; box-shadow: var(--shadow-hard-sm); display: flex; align-items: flex-start; gap: 8px;">
+                <span class="icon-svg" style="width: 17px; height: 17px; color: var(--color-electric); margin-top: 2px; flex-shrink: 0;"><svg><use href="#icon-shield-check"></use></svg></span>
+                <div style="font-size: 0.85rem; color: var(--color-ink-soft); line-height: 1.45;">
+                    RESTful API dengan autentikasi <strong>Laravel Sanctum</strong>.
+                </div>
+            </div>
+
+            <!-- Poin 2 -->
+            <div style="background: var(--color-bone-light); border: var(--border-width) solid var(--color-ink); border-radius: var(--border-radius-sm); padding: 12px 14px; box-shadow: var(--shadow-hard-sm); display: flex; align-items: flex-start; gap: 8px;">
+                <span class="icon-svg" style="width: 17px; height: 17px; color: var(--color-electric); margin-top: 2px; flex-shrink: 0;"><svg><use href="#icon-terminal"></use></svg></span>
+                <div style="font-size: 0.85rem; color: var(--color-ink-soft); line-height: 1.45;">
+                    Pertukaran data terstruktur menggunakan <strong>JSON</strong>.
+                </div>
+            </div>
+
+            <!-- Poin 3 -->
+            <div style="background: var(--color-bone-light); border: var(--border-width) solid var(--color-ink); border-radius: var(--border-radius-sm); padding: 12px 14px; box-shadow: var(--shadow-hard-sm); display: flex; align-items: flex-start; gap: 8px;">
+                <span class="icon-svg" style="width: 17px; height: 17px; color: var(--color-electric); margin-top: 2px; flex-shrink: 0;"><svg><use href="#icon-globe"></use></svg></span>
+                <div style="font-size: 0.85rem; color: var(--color-ink-soft); line-height: 1.45;">
+                    Arsitektur siap dikembangkan menuju interoperabilitas <strong>FHIR / SATUSEHAT</strong>.
+                </div>
+            </div>
+        </div>
+
+        <!-- API Gateway Bar -->
+        <div style="background: var(--color-bone); border: var(--border-width) solid var(--color-ink); border-radius: var(--border-radius-sm); padding: 10px 14px; font-size: 0.84rem; display: flex; align-items: center; justify-content: space-between; box-shadow: var(--shadow-hard-sm);">
+            <div>
+                <strong>API GATEWAY:</strong>
+                <code style="color: var(--color-electric); font-weight: 700; margin-left: 8px; font-size: 0.84rem;">/api/prescriptions</code> &bull;
+                <code style="color: var(--color-electric); font-weight: 700; margin-left: 4px; font-size: 0.84rem;">/api/copy-prescription</code> &bull;
+                <code style="color: var(--color-electric); font-weight: 700; margin-left: 4px; font-size: 0.84rem;">/api/medicines</code>
+            </div>
+            <span class="card-tag tag-acid" style="margin: 0; padding: 2px 8px; font-size: 0.7rem;">Active Endpoints</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,358 @@
+/* ==========================================================================
+   PZN DESIGN SYSTEM: TOKENS, RESETS, BUTTONS, CARDS & UTILITIES
+   ========================================================================== */
+
+        /* ==========================================================================
+           PROGRAMMER ZAMAN NOW (PZN) DESIGN SYSTEM WITH ANIMATIONS & ICONS
+           Palette: Bone (#f1ede2), Paper (#ffffff), Ink (#0c0c0c),
+                    Electric Blue (#2b2be8), Acid Lime (#d8ff3e),
+                    Tone Mint (#7de0a6), Tone Orange (#ffb84d), Tone Sky (#8fd8f0)
+           ========================================================================== */
+        :root {
+            --color-bone: #f1ede2;
+            --color-bone-light: #f9f7f2;
+            --color-bone-dark: #e5dfd0;
+            --color-paper: #ffffff;
+            --color-ink: #0c0c0c;
+            --color-ink-soft: #4a4842;
+            --color-ink-muted: #6b6963;
+            --color-electric: #2b2be8;
+            --color-electric-light: #5454f5;
+            --color-electric-bg: #eef0fd;
+            --color-acid: #d8ff3e;
+            --color-tone-mint: #7de0a6;
+            --color-tone-orange: #ffb84d;
+            --color-tone-sky: #8fd8f0;
+            --color-tone-purple: #c4b5fd;
+            --color-alert: #e11d48;
+            --color-alert-bg: #ffe4e6;
+
+            --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+            --border-width: 2px;
+            --border-radius-sm: 8px;
+            --border-radius-md: 12px;
+            --border-radius-lg: 16px;
+
+            --shadow-hard-sm: 2px 2px 0px var(--color-ink);
+            --shadow-hard-md: 4px 4px 0px var(--color-ink);
+            --shadow-hard-lg: 6px 6px 0px var(--color-ink);
+            --shadow-hard-hover: 6px 6px 0px var(--color-ink);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bone);
+            background-image: radial-gradient(var(--color-bone-dark) 1.2px, transparent 1.2px);
+            background-size: 20px 20px;
+            color: var(--color-ink);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* SVG Icon Helper */
+        .icon-svg {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            width: 1.15em;
+            height: 1.15em;
+            flex-shrink: 0;
+        }
+
+        .icon-svg svg {
+            width: 100%;
+            height: 100%;
+            stroke-width: 2.2;
+            stroke: currentColor;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .icon-box-lg {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--border-radius-sm);
+            border: var(--border-width) solid var(--color-ink);
+            box-shadow: 2px 2px 0 var(--color-ink);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pznBlink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            50.01%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes pznPulseGlow {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
+        @keyframes pznFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        .pzn-cursor-blink {
+            display: inline-block;
+            width: 9px;
+            height: 1.1em;
+            background: var(--color-ink);
+            margin-left: 4px;
+            vertical-align: -2px;
+            animation: pznBlink 1s infinite steps(1);
+        }
+
+        .pulse-soft {
+            animation: pznPulseGlow 3s ease-in-out infinite;
+        }
+
+        .float-soft {
+            animation: pznFloat 3.5s ease-in-out infinite;
+        }
+
+        /* Buttons - PZN Hard Shadow & Hover Lift */
+        .btn {
+            font-family: var(--font-display);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 7px 16px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            border-radius: var(--border-radius-sm);
+            border: var(--border-width) solid var(--color-ink);
+            box-shadow: var(--shadow-hard-sm);
+            background: var(--color-paper);
+            color: var(--color-ink);
+            cursor: pointer;
+            transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            user-select: none;
+        }
+
+        .btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-hard-md);
+        }
+
+        .btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px var(--color-ink);
+        }
+
+        .btn-primary {
+            background: var(--color-electric);
+            color: var(--color-paper);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-electric-light);
+            color: var(--color-paper);
+        }
+
+        .btn-acid {
+            background: var(--color-acid);
+            color: var(--color-ink);
+        }
+
+        .btn-acid:hover {
+            background: #e2ff62;
+        }
+
+        .slide-counter-badge {
+            background: var(--color-paper);
+            border: var(--border-width) solid var(--color-ink);
+            box-shadow: var(--shadow-hard-sm);
+            padding: 6px 14px;
+            border-radius: var(--border-radius-sm);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--color-electric);
+        }
+
+        /* Main Presentation Stage */
+        /* PZN Card Containers */
+        .pzn-card {
+            background: var(--color-paper);
+            border: var(--border-width) solid var(--color-ink);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-hard-md);
+            padding: 24px;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            position: relative;
+        }
+
+        .pzn-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-hard-hover);
+        }
+
+        .pzn-card-bone {
+            background: var(--color-bone-light);
+        }
+
+        .pzn-card-electric {
+            background: var(--color-electric-bg);
+            border-color: var(--color-ink);
+        }
+
+        .card-tag {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1.5px solid var(--color-ink);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .tag-blue {
+            background: var(--color-tone-sky);
+            color: var(--color-ink);
+        }
+
+        .tag-acid {
+            background: var(--color-acid);
+            color: var(--color-ink);
+        }
+
+        .tag-orange {
+            background: var(--color-tone-orange);
+            color: var(--color-ink);
+        }
+
+        .tag-mint {
+            background: var(--color-tone-mint);
+            color: var(--color-ink);
+        }
+
+        .tag-purple {
+            background: var(--color-tone-purple);
+            color: var(--color-ink);
+        }
+
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-ink);
+            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-body-text {
+            font-size: 0.92rem;
+            color: var(--color-ink-soft);
+            line-height: 1.6;
+        }
+
+        /* Step List Styling with Hard-Pill Numbers */
+        .pzn-step-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .pzn-step-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 0.93rem;
+            line-height: 1.5;
+            color: var(--color-ink-soft);
+        }
+
+        .pzn-step-list li strong {
+            color: var(--color-ink);
+        }
+
+        .step-pill {
+            min-width: 30px;
+            height: 30px;
+            background: var(--color-acid);
+            color: var(--color-ink);
+            border: var(--border-width) solid var(--color-ink);
+            box-shadow: 2px 2px 0 var(--color-ink);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .step-pill.blue {
+            background: var(--color-electric);
+            color: var(--color-paper);
+        }
+
+        .step-pill.orange {
+            background: var(--color-tone-orange);
+            color: var(--color-ink);
+        }
+

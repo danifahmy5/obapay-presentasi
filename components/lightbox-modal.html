@@ -1,0 +1,64 @@
+    <!-- Lightbox Zoom Modal Pop-up with Multi-Image Gallery -->
+    <div class="pzn-lightbox-overlay" id="lightboxModal" onclick="handleLightboxBackdropClick(event)">
+        <div class="lightbox-header-bar" onclick="event.stopPropagation()">
+            <div class="lightbox-title-box">
+                <span class="icon-svg" style="color: var(--color-electric);"><svg>
+                        <use href="#icon-camera"></use>
+                    </svg></span>
+                <span class="lightbox-caption-text" id="lightboxCaption">Tangkapan Layar ObaPay</span>
+                <span class="lightbox-gallery-counter-pill" id="lightboxGalleryPill" style="display: none;">1 / 1</span>
+            </div>
+            <div class="lightbox-controls-group">
+                <button type="button" class="lightbox-ctrl-btn" id="lightboxPrevBtnTop" onclick="navigateLightboxGallery(-1)" style="display:none;" title="Foto Sebelumnya (Panah Kiri ←)">
+                    ‹ Prev
+                </button>
+                <button type="button" class="lightbox-ctrl-btn" id="lightboxNextBtnTop" onclick="navigateLightboxGallery(1)" style="display:none;" title="Foto Berikutnya (Panah Kanan →)">
+                    Next ›
+                </button>
+                <button type="button" class="lightbox-ctrl-btn" onclick="adjustLightboxZoom(-0.25)"
+                    title="Perkecil Zoom (-)">
+                    <span style="font-size: 1.1rem; line-height: 1;">−</span>
+                </button>
+                <button type="button" class="lightbox-ctrl-btn" onclick="resetLightboxZoom()"
+                    title="Reset Ukuran Layar (100%)">
+                    <span id="lightboxZoomPercent">100%</span>
+                </button>
+                <button type="button" class="lightbox-ctrl-btn" onclick="adjustLightboxZoom(0.25)"
+                    title="Perbesar Zoom (+)">
+                    <span style="font-size: 1.1rem; line-height: 1;">+</span>
+                </button>
+                <button type="button" class="lightbox-ctrl-btn btn-close-box" onclick="closeLightboxDirect()"
+                    title="Tutup Pop-up (Esc)">
+                    ✕ Tutup
+                </button>
+            </div>
+        </div>
+        <div class="lightbox-image-viewport" id="lightboxViewport" onclick="handleLightboxViewportClick(event)">
+            <!-- Left / Right Floating Navigation Arrows -->
+            <button type="button" class="lightbox-nav-arrow arrow-left" id="lightboxArrowLeft" onclick="event.stopPropagation(); navigateLightboxGallery(-1)" style="display:none;" title="Foto Sebelumnya (Panah Kiri ←)">
+                ‹
+            </button>
+
+            <img src="" alt="Enlarged Screenshot" class="lightbox-image-view" id="lightboxImg"
+                onclick="handleLightboxImageClick(event)">
+
+            <button type="button" class="lightbox-nav-arrow arrow-right" id="lightboxArrowRight" onclick="event.stopPropagation(); navigateLightboxGallery(1)" style="display:none;" title="Foto Berikutnya (Panah Kanan →)">
+                ›
+            </button>
+        </div>
+
+        <!-- Thumbnail Strip at Bottom -->
+        <div class="lightbox-thumb-strip" id="lightboxThumbStrip" onclick="event.stopPropagation()" style="display: none;"></div>
+
+        <div class="lightbox-footer-hint" onclick="event.stopPropagation()">
+            <span id="lightboxHintGallery" style="display:none;">⌨️ <strong>Panah Kiri / Kanan</strong> untuk ganti gambar</span>
+            <span id="lightboxHintGallerySep" style="display:none;">•</span>
+            <span>🔍 <strong>Klik gambar</strong> untuk zoom in/out</span>
+            <span>•</span>
+            <span>✋ <strong>Tahan & geser</strong> untuk menggeser gambar yang di-zoom</span>
+            <span>•</span>
+            <span>🖱️ <strong>Scroll mouse</strong> untuk zoom halus</span>
+            <span>•</span>
+            <span>⌨️ Tekan <kbd class="kbd-pzn">Esc</kbd> untuk menutup</span>
+        </div>
+    </div>

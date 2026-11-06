@@ -1,0 +1,225 @@
+<div class="slide-content-wrap active" data-slide="1">
+    <wave-background variant="1" mask="left"></wave-background>
+
+    <slide-top-meta slide="1" badge="From Manual to Smart Pharmacy" icon="terminal"
+        speaker="Transformasi Digital RS"></slide-top-meta>
+    <div class="slide01-layout">
+        <div class="slide01-copy">
+            <div class="slide01-brand-badge" style="margin-bottom: 8px;">
+                <span class="hero-logo-box">
+                    <span class="icon-svg"><svg>
+                            <use href="#icon-pill"></use>
+                        </svg></span>
+                </span>
+                <span style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--color-ink);">ObaPay</span>
+                <span class="slide01-version-chip">Smart Pharmacy</span>
+            </div>
+
+            <h1 class="slide-heading" style="font-size: clamp(1.4rem, 2vw, 1.85rem); line-height: 1.25; letter-spacing: -0.025em; margin: 8px 0 10px; font-weight: 800;">
+                From Manual to Smart Pharmacy: <span style="color: var(--color-electric);">Membangun Pengelolaan Farmasi yang Terintegrasi, Otomatis, dan Efisien</span>
+            </h1>
+
+            <div class="slide01-typewriter-box" id="typewriterBox" title="Klik untuk mengganti kata kunci">
+                <span class="slide01-typewriter-tag">
+                    <span class="icon-svg"><svg>
+                            <use href="#icon-sparkles"></use>
+                        </svg></span>
+                    SOLUSI
+                </span>
+                <div class="slide01-typewriter-text">
+                    <span class="typewriter-word" id="typewriterWord">Smart Pharmacy System</span><span
+                        class="typewriter-caret" aria-hidden="true"></span>
+                </div>
+            </div>
+
+            <p class="slide01-definition">Sistem informasi yang dikembangkan untuk mendukung pelayanan farmasi dan
+                pengelolaan persediaan obat secara lebih terstruktur, efisien, dan terintegrasi.</p>
+
+            <!-- 3 Pilar Fitur Utama (Pemanis Visual Icon Cards) -->
+            <div class="slide01-feature-grid">
+                <div class="slide01-feature-item">
+                    <div class="slide01-feature-icon icon-bg-blue">
+                        <span class="icon-svg"><svg>
+                                <use href="#icon-package"></use>
+                            </svg></span>
+                    </div>
+                    <div class="slide01-feature-text">
+                        <strong>Logistik Farmasi (Siklus A)</strong>
+                        <span>8 Tahap Pengadaan, Defecta & Multi-Gudang</span>
+                    </div>
+                </div>
+                <div class="slide01-feature-item">
+                    <div class="slide01-feature-icon icon-bg-acid">
+                        <span class="icon-svg"><svg>
+                                <use href="#icon-clipboard-check"></use>
+                            </svg></span>
+                    </div>
+                    <div class="slide01-feature-text">
+                        <strong>Pelayanan Resep (Siklus B)</strong>
+                        <span>6 Tahap E-Resep, 14 Poin Telaah & 5 Tepat</span>
+                    </div>
+                </div>
+                <div class="slide01-feature-item">
+                    <div class="slide01-feature-icon icon-bg-orange">
+                        <span class="icon-svg"><svg>
+                                <use href="#icon-zap"></use>
+                            </svg></span>
+                    </div>
+                    <div class="slide01-feature-text">
+                        <strong>Integrasi / Bridging</strong>
+                        <span>Terhubung ERM, APOL & Edukasi WhatsApp</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide01-background" style="display: flex; align-items: flex-start; gap: 10px;">
+                <span class="icon-svg" style="color: var(--color-electric); margin-top: 2px; flex-shrink: 0;"><svg>
+                        <use href="#icon-bulb"></use>
+                    </svg></span>
+                <p>Berawal dari kebutuhan nyata di lapangan, berkembang menjadi solusi yang dirancang sesuai alur kerja
+                    operasional rumah sakit modern.</p>
+            </div>
+        </div>
+        <div class="slide01-visual">
+            <!-- Dual Device Showcase Slide 1 (Desktop + Smartphone) -->
+            <div class="slide01-showcase-wrap">
+                <div class="device-selector-toolbar"
+                    style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                    <span
+                        style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-ink-muted); display: flex; align-items: center; gap: 6px;">
+                        <span class="icon-svg" style="color: var(--color-electric);"><svg>
+                                <use href="#icon-activity"></use>
+                            </svg></span>
+                        Pratinjau Antarmuka:
+                    </span>
+                    <div class="device-tabs-btn-group">
+                        <button type="button" class="device-tab-btn active" id="btnModeBoth"
+                            onclick="switchSlide1Device('both')">
+                            <span class="icon-svg"><svg>
+                                    <use href="#icon-layers"></use>
+                                </svg></span>
+                            <span>PC & HP</span>
+                        </button>
+                        <button type="button" class="device-tab-btn" id="btnModeDesktop"
+                            onclick="switchSlide1Device('desktop')">
+                            <span class="icon-svg"><svg>
+                                    <use href="#icon-monitor"></use>
+                                </svg></span>
+                            <span>Desktop</span>
+                        </button>
+                        <button type="button" class="device-tab-btn" id="btnModeMobile"
+                            onclick="switchSlide1Device('mobile')">
+                            <span class="icon-svg"><svg>
+                                    <use href="#icon-smartphone"></use>
+                                </svg></span>
+                            <span>Smartphone</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="device-display-flex is-both" id="slide1DeviceContainer">
+                    <!-- 1. Desktop Window -->
+                    <div class="screenshot-window desktop-wrap-slide1" id="winDesktopSlide1"
+                        data-key="slide01-dashboard-overview">
+                        <div class="window-header">
+                            <div class="window-traffic-lights">
+                                <span class="traffic-dot dot-close"></span>
+                                <span class="traffic-dot dot-minimize"></span>
+                                <span class="traffic-dot dot-zoom" title="Klik untuk Zoom / Perbesar Layar"></span>
+                            </div>
+                            <div class="window-url-bar">obapay.local/dashboard (Desktop Web)</div>
+                            <div style="display: flex; gap: 6px;">
+                                <button type="button" class="btn btn-acid btn-zoom-window"
+                                    style="padding: 2px 8px; font-size: 0.72rem;"
+                                    title="Klik untuk Zoom / Perbesar Layar">🔍 Zoom</button>
+                                <button class="btn btn-acid" style="padding: 2px 8px; font-size: 0.72rem;"
+                                    onclick="triggerUpload('slide01-dashboard-overview')">Ganti</button>
+                            </div>
+                        </div>
+                        <div class="window-content">
+                            <img src="screenshots/slide01-dashboard-overview.png"
+                                alt="Dashboard Analitik ObaPay (Desktop)" class="screenshot-real-img"
+                                onload="handleImageLoaded(this)"
+                                onerror="handleImageError(this, 'slide01-dashboard-overview')">
+                            <div class="window-placeholder-guide" id="guide-slide01-dashboard-overview">
+                                <span class="guide-tech-badge">
+                                    <span class="icon-svg"><svg>
+                                            <use href="#icon-bar-chart"></use>
+                                        </svg></span>
+                                    DESKTOP PC
+                                </span>
+                                <div class="guide-target-title">Dashboard Analitik (Desktop)</div>
+                                <div class="guide-route-box">Menu: Main Menu → Dashboard Analitik (`/dashboard`)
+                                </div>
+                                <p class="guide-instructions-text" style="font-size: 0.8rem; line-height: 1.4;">
+                                    Screenshot layar Dashboard Analitik ObaPay versi web desktop (ringkasan
+                                    penjualan, pergerakan stok, dan indikator).
+                                </p>
+                                <div class="guide-action-buttons">
+                                    <button class="btn btn-acid"
+                                        onclick="triggerUpload('slide01-dashboard-overview')">📁 Upload
+                                        Desktop</button>
+                                    <a href="http://localhost:8000/dashboard" target="_blank" class="btn">
+                                        Buka
+                                        <span class="icon-svg"><svg>
+                                                <use href="#icon-external-link"></use>
+                                            </svg></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Smartphone Frame -->
+                    <div class="mobile-wrap-slide1" id="winMobileSlide1">
+                        <div class="smartphone-mockup-frame screenshot-window" data-key="slide01-mobile-dashboard">
+                            <div class="smartphone-notch-island">
+                                <span class="notch-camera-dot"></span>
+                                <span class="notch-speaker-slit"></span>
+                            </div>
+                            <div class="smartphone-screen-area window-content">
+                                <img src="screenshots/slide01-mobile-dashboard.png"
+                                    alt="Dashboard ObaPay Mobile (Smartphone)" class="screenshot-real-img"
+                                    onload="handleImageLoaded(this)"
+                                    onerror="handleImageError(this, 'slide01-mobile-dashboard')">
+                                <div class="window-placeholder-guide" id="guide-slide01-mobile-dashboard"
+                                    style="padding: 14px 10px; gap: 8px;">
+                                    <span class="guide-tech-badge" style="font-size: 0.7rem; padding: 2px 6px;">
+                                        <span class="icon-svg"><svg>
+                                                <use href="#icon-smartphone"></use>
+                                            </svg></span>
+                                        MOBILE HP
+                                    </span>
+                                    <div class="guide-target-title" style="font-size: 0.82rem;">ObaPay Mobile
+                                    </div>
+                                    <div class="guide-route-box" style="font-size: 0.68rem; padding: 3px 6px;">
+                                        URL: `/dashboard` (HP)</div>
+                                    <p class="guide-instructions-text"
+                                        style="font-size: 0.72rem; line-height: 1.3; margin: 0;">
+                                        Screenshot tampilan responsive smartphone (mobile kasir/stok).
+                                    </p>
+                                    <div class="guide-action-buttons"
+                                        style="flex-direction: column; width: 100%; gap: 6px;">
+                                        <button class="btn btn-acid" style="padding: 3px 6px; font-size: 0.72rem;"
+                                            onclick="triggerUpload('slide01-mobile-dashboard')">📁 Upload
+                                            HP</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="smartphone-bottom-bar">
+                                <div style="display: flex; gap: 6px; align-items: center; margin-bottom: 2px;">
+                                    <button type="button" class="btn btn-acid btn-zoom-window"
+                                        style="padding: 1px 6px; font-size: 0.68rem;"
+                                        title="Zoom Screenshot Smartphone">🔍 Zoom</button>
+                                    <button class="btn btn-acid" style="padding: 1px 6px; font-size: 0.68rem;"
+                                        onclick="triggerUpload('slide01-mobile-dashboard')">Ganti</button>
+                                </div>
+                                <div class="smartphone-home-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

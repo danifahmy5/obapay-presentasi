@@ -1,0 +1,45 @@
+    <!-- Modal Checklist Screenshot Manual -->
+    <div class="pzn-modal-overlay" id="modalChecklist">
+        <div class="pzn-modal-card">
+            <div class="pzn-modal-header">
+                <div class="pzn-modal-title">
+                    <span class="icon-svg" style="color: var(--color-electric);"><svg>
+                            <use href="#icon-camera"></use>
+                        </svg></span>
+                    <span>Panduan & Checklist Screenshot Manual ObaPay</span>
+                </div>
+                <button class="btn btn-acid" onclick="closeChecklistModal()" style="padding: 4px 10px;">✕ Tutup</button>
+            </div>
+            <div class="pzn-modal-body">
+                <p style="font-size: 0.88rem; color: var(--color-ink-soft); margin-bottom: 16px;">
+                    Simpan tangkapan layar ke dalam folder <code>ppt/screenshots/</code> dengan nama file di bawah, atau
+                    klik tombol <strong>"Upload"</strong> pada baris tabel untuk menyematkan langsung dari browser.
+                </p>
+                <table class="pzn-checklist-table">
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Slide</th>
+                            <th>Nama File Tujuan</th>
+                            <th>Menu di ObaPay</th>
+                            <th>URL Lokal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="checklistTableBody">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="pzn-modal-footer">
+                <button class="btn" onclick="closeChecklistModal()">Selesai</button>
+                <button class="btn btn-primary" onclick="exportStandaloneHtml()">
+                    <span class="icon-svg"><svg>
+                            <use href="#icon-download"></use>
+                        </svg></span>
+                    Unduh HTML Mandiri (dengan Screenshot)
+                </button>
+            </div>
+        </div>
+    </div>
+

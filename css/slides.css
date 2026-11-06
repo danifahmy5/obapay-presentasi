@@ -1,0 +1,914 @@
+/* ==========================================================================
+   SLIDE SPECIFIC STYLES: TYPEWRITER, DEVICE FRAMES, MATRIX & ROADMAP
+   ========================================================================== */
+        /* Slide 1 Typewriter Animation (PZN High-Tech Style) */
+        .typewriter-word {
+            color: var(--color-electric);
+            position: relative;
+            display: inline-block;
+            border-bottom: 4px solid var(--color-acid);
+            padding: 0 4px;
+            white-space: nowrap;
+            letter-spacing: -0.02em;
+            transition: color 0.15s ease;
+        }
+
+        .typewriter-caret {
+            display: inline-block;
+            width: 4px;
+            height: 0.88em;
+            background-color: var(--color-electric);
+            margin-left: 5px;
+            vertical-align: -0.06em;
+            animation: pznBlink 0.85s infinite steps(1);
+        }
+
+        .slide-lead {
+            font-size: 0.95rem;
+            color: var(--color-ink-muted);
+            font-weight: 500;
+            line-height: 1.45;
+            margin-bottom: 14px;
+        }
+
+        /* Layout Grids */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            margin-bottom: 24px;
+        }
+
+        .grid-3col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .grid-4col {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        /* Slide Organic Wave Background */
+        .slide-content-wrap:has(wave-background),
+        .slide-content-wrap[data-slide] {
+            position: relative !important;
+            overflow: hidden !important;
+            background-color: #ffffff;
+        }
+
+        .slide-content-wrap > .slide01-wave-bg,
+        .slide-content-wrap > .slide-wave-bg {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            pointer-events: none !important;
+            user-select: none !important;
+            overflow: hidden !important;
+            z-index: 0 !important;
+        }
+
+        .slide-content-wrap > :not(.slide01-wave-bg):not(.slide-wave-bg):not(wave-background) {
+            position: relative;
+            z-index: 1;
+        }
+
+        .slide01-wave-bg svg,
+        .slide-wave-bg svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            pointer-events: none;
+        }
+
+        /* Slide 1: editorial introduction and a dominant application preview. */
+        .slide01-layout {
+            display: grid;
+            grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.8fr);
+            gap: 28px;
+            align-items: center;
+            flex: 1;
+            padding: 4px 0;
+        }
+
+        .slide01-brand-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        .hero-logo-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            background: var(--color-electric);
+            color: var(--color-paper);
+            border: var(--border-width) solid var(--color-ink);
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow-hard-sm);
+            flex-shrink: 0;
+        }
+
+        .hero-logo-box .icon-svg {
+            width: 26px;
+            height: 26px;
+        }
+
+        .hero-logo-box .icon-svg svg {
+            stroke-width: 2.2;
+        }
+
+        .slide01-version-chip {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 700;
+            background: var(--color-acid);
+            color: var(--color-ink);
+            padding: 3px 8px;
+            border-radius: 999px;
+            border: 1.5px solid var(--color-ink);
+            box-shadow: 2px 2px 0 var(--color-ink);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .slide01-copy .slide-heading {
+            font-size: clamp(2.2rem, 3.4vw, 3.2rem);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            color: var(--color-ink);
+            margin-bottom: 0;
+        }
+
+        /* Slide 1 Typewriter Neo-Brutalist Box */
+        .slide01-typewriter-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--color-paper);
+            border: var(--border-width) solid var(--color-ink);
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow-hard-sm);
+            padding: 6px 12px;
+            margin-bottom: 12px;
+            max-width: 100%;
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+            user-select: none;
+        }
+
+        .slide01-typewriter-box:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: var(--shadow-hard-md);
+            background: var(--color-bone-light);
+        }
+
+        .slide01-typewriter-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--color-electric);
+            color: var(--color-paper);
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .slide01-typewriter-text {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--color-ink);
+            min-height: 1.3em;
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        .slide01-typewriter-text .typewriter-word {
+            color: var(--color-electric);
+            border-bottom: 3px solid var(--color-acid);
+            padding-bottom: 1px;
+            letter-spacing: -0.01em;
+        }
+
+        .slide01-typewriter-text .typewriter-caret {
+            display: inline-block;
+            width: 3px;
+            height: 1.15em;
+            background-color: var(--color-electric);
+            margin-left: 4px;
+            vertical-align: middle;
+            animation: pznBlink 0.85s infinite steps(1);
+        }
+
+        .slide01-eyebrow {
+            font-family: var(--font-mono);
+            font-size: 0.74rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-ink);
+            background: var(--color-paper);
+            border: 1.5px solid var(--color-ink);
+            border-radius: 20px;
+            padding: 3px 10px;
+            margin-bottom: 10px;
+            box-shadow: 2px 2px 0 var(--color-ink);
+            display: inline-flex;
+            width: fit-content;
+        }
+
+        .slide01-definition {
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.55;
+            color: #0c0c0c;
+            margin-bottom: 12px;
+        }
+
+        .slide01-background {
+            background: var(--color-paper);
+            border: 1.5px solid var(--color-ink);
+            border-left: 4px solid var(--color-electric);
+            box-shadow: var(--shadow-hard-sm);
+            padding: 10px 14px;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.84rem;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #1e293b;
+        }
+
+        .slide01-background p + p {
+            margin-top: 4px;
+        }
+
+        /* Slide 1 Feature Highlights Grid */
+        .slide01-feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: 10px 0 12px 0;
+        }
+
+        .slide01-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--color-paper);
+            border: var(--border-width) solid var(--color-ink);
+            border-radius: var(--border-radius-sm);
+            padding: 6px 10px;
+            box-shadow: var(--shadow-hard-sm);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .slide01-feature-item:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: var(--shadow-hard-md);
+        }
+
+        .slide01-feature-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            border: 1.5px solid var(--color-ink);
+            flex-shrink: 0;
+        }
+
+        .slide01-feature-icon.icon-bg-blue {
+            background: var(--color-tone-sky);
+            color: var(--color-ink);
+        }
+
+        .slide01-feature-icon.icon-bg-acid {
+            background: var(--color-acid);
+            color: var(--color-ink);
+        }
+
+        .slide01-feature-icon.icon-bg-orange {
+            background: var(--color-tone-orange);
+            color: var(--color-ink);
+        }
+
+        .slide01-feature-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .slide01-feature-text strong {
+            font-family: var(--font-display);
+            font-size: 0.86rem;
+            font-weight: 800;
+            color: #0c0c0c;
+            line-height: 1.2;
+        }
+
+        .slide01-feature-text span {
+            font-size: 0.76rem;
+            font-weight: 500;
+            color: #334155;
+            line-height: 1.25;
+        }
+
+        .slide01-visual {
+            width: 100%;
+            min-width: 0;
+        }
+
+        .slide01-visual .slide01-showcase-wrap {
+            gap: 12px;
+        }
+
+        .slide01-visual .device-selector-toolbar {
+            order: 2;
+            justify-content: center;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            padding: 0;
+        }
+
+        .slide01-visual .device-tab-btn {
+            box-shadow: none;
+            padding: 4px 8px;
+        }
+
+        .slide01-visual .desktop-wrap-slide1 {
+            min-width: 0;
+            height: auto;
+        }
+
+        .slide01-visual .desktop-wrap-slide1 .window-content {
+            min-height: 360px;
+            max-height: 480px;
+            background: #0f121a;
+        }
+
+        .slide01-visual .desktop-wrap-slide1 .screenshot-real-img {
+            height: auto;
+            max-height: 480px;
+            object-fit: contain;
+        }
+
+        .slide01-visual .window-header {
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .slide01-visual .window-url-bar {
+            min-width: 0;
+        }
+
+        .slide01-visual .device-display-flex {
+            position: relative;
+            isolation: isolate;
+        }
+
+        .slide01-visual .device-display-flex.is-both {
+            padding: 0 0 35px 16px;
+        }
+
+        .slide01-visual .is-both .mobile-wrap-slide1 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        .slide01-visual .is-both .smartphone-mockup-frame {
+            width: 140px;
+            height: 290px;
+            min-height: 290px;
+            border-radius: 26px;
+            padding: 6px 5px;
+            box-shadow: 4px 6px 18px rgba(12, 12, 12, 0.25);
+        }
+
+        /* Device Showcase Wrap on Slide 1 */
+        .slide01-showcase-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 100%;
+        }
+
+        .device-selector-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            background: var(--color-bone);
+            border: var(--border-width) solid var(--color-ink);
+            box-shadow: var(--shadow-hard-sm);
+            border-radius: var(--border-radius-sm);
+            padding: 4px 8px;
+            flex-wrap: wrap;
+        }
+
+        .device-tabs-btn-group {
+            display: flex;
+            gap: 6px;
+        }
+
+        .device-tab-btn {
+            background: var(--color-paper);
+            color: var(--color-ink);
+            border: 1.5px solid var(--color-ink);
+            box-shadow: 2px 2px 0 var(--color-ink);
+            border-radius: 6px;
+            padding: 3px 8px;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .device-tab-btn:hover {
+            background: var(--color-acid);
+        }
+
+        .device-tab-btn.active {
+            background: var(--color-electric);
+            color: var(--color-paper);
+        }
+
+        .device-display-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex: 1;
+            width: 100%;
+        }
+
+        .device-display-flex .desktop-wrap-slide1 {
+            flex: 1;
+            min-width: 270px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .device-display-flex .mobile-wrap-slide1 {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .window-header {
+            background: var(--color-bone);
+            border-bottom: var(--border-width) solid var(--color-ink);
+            padding: 8px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .window-traffic-lights {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .traffic-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1.5px solid var(--color-ink);
+        }
+
+        .dot-close {
+            background: #ff5f56;
+        }
+
+        .dot-minimize {
+            background: #ffbd2e;
+        }
+
+        .dot-zoom {
+            background: #27c93f;
+        }
+
+        .window-url-bar {
+            background: var(--color-paper);
+            border: 1.5px solid var(--color-ink);
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-family: var(--font-mono);
+            font-size: 0.74rem;
+            color: var(--color-ink-soft);
+            max-width: 55%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .window-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-bone-light);
+            position: relative;
+            min-height: 240px;
+        }
+
+        .screenshot-real-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            cursor: zoom-in;
+        }
+
+        .window-placeholder-guide {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .guide-tech-badge {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            background: var(--color-acid);
+            color: var(--color-ink);
+            border: 1.5px solid var(--color-ink);
+            box-shadow: 2px 2px 0 var(--color-ink);
+            padding: 3px 10px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .guide-target-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--color-ink);
+            font-size: 1.05rem;
+        }
+
+        .guide-route-box {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            background: var(--color-paper);
+            color: var(--color-electric);
+            padding: 5px 12px;
+            border-radius: 6px;
+            border: 1.5px solid var(--color-ink);
+            box-shadow: 2px 2px 0 var(--color-ink);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+        }
+
+        .guide-instructions-text {
+            font-size: 0.85rem;
+            color: var(--color-ink-muted);
+            line-height: 1.5;
+            max-width: 420px;
+        }
+
+        .guide-action-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 6px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Slide 2 & Slide 3 Split Layout & Large Screenshot Showcase */
+        #stageDetailA,
+        #stageDetailB {
+            display: grid;
+            grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.52fr);
+            gap: 16px;
+            align-items: stretch;
+            margin-bottom: 0;
+        }
+
+        #stageTextA,
+        #stageTextB {
+            padding: 16px 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #stageTextA .card-title,
+        #stageTextB .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            line-height: 1.25;
+        }
+
+        #stageTextA .card-body-text,
+        #stageTextB .card-body-text {
+            font-size: 0.84rem;
+            line-height: 1.45;
+            margin-bottom: 10px;
+        }
+
+        #frameStageA,
+        #frameStageB {
+            min-height: 380px;
+        }
+
+        #frameStageA .window-content,
+        #frameStageB .window-content {
+            min-height: 380px;
+            max-height: 480px;
+            background: #0f121a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #frameStageA .screenshot-real-img,
+        #frameStageB .screenshot-real-img {
+            width: 100%;
+            height: 100%;
+            max-height: 480px;
+            object-fit: contain;
+        }
+
+        /* Comparison Table on Slide 7 */
+        .pzn-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: var(--border-width) solid var(--color-ink);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-hard-md);
+            overflow: hidden;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            background: var(--color-paper);
+        }
+
+        .pzn-table th {
+            background: var(--color-bone-dark);
+            border-bottom: var(--border-width) solid var(--color-ink);
+            padding: 14px 18px;
+            font-family: var(--font-display);
+            font-weight: 800;
+            color: var(--color-ink);
+            text-align: left;
+        }
+
+        .pzn-table td {
+            padding: 14px 18px;
+            border-bottom: 1.5px solid var(--color-bone);
+            color: var(--color-ink-soft);
+            line-height: 1.5;
+            vertical-align: top;
+        }
+
+        .pzn-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pzn-table td.aspect-col {
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--color-ink);
+            background: var(--color-bone-light);
+            width: 18%;
+        }
+
+        .pzn-table td.manual-col {
+            background: var(--color-alert-bg);
+            color: #9f1239;
+            width: 41%;
+        }
+
+        .pzn-table td.smart-col {
+            background: var(--color-electric-bg);
+            color: var(--color-ink);
+            font-weight: 500;
+            width: 41%;
+        }
+
+
+/* ==========================================================================
+   SLIDE 2: FRESH 8-STAGE LOGISTICS PIPELINE (VISUAL & MINIMAL TEXT)
+   ========================================================================== */
+.pipeline-overview-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.pipeline-flow-legend {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-paper);
+    border: var(--border-width) solid var(--color-ink);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-hard-sm);
+    padding: 8px 18px;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.pipeline-flow-step {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-ink);
+}
+
+.pipeline-flow-arrow {
+    color: var(--color-electric);
+    font-weight: 800;
+}
+
+.pipeline-grid-8 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 12px;
+}
+
+.pipeline-card {
+    background: var(--color-paper);
+    border: var(--border-width) solid var(--color-ink);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-hard-sm);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    user-select: none;
+}
+
+.pipeline-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: var(--shadow-hard-hover);
+    border-color: var(--color-electric);
+}
+
+.pipeline-card:active {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0 var(--color-ink);
+}
+
+.pipeline-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pipeline-num {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 6px;
+    border: 1.5px solid var(--color-ink);
+    letter-spacing: -0.02em;
+}
+
+.pipeline-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--border-radius-sm);
+    border: 1.5px solid var(--color-ink);
+    box-shadow: 2px 2px 0 var(--color-ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--color-ink);
+}
+
+.pipeline-name {
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: var(--color-ink);
+    line-height: 1.2;
+}
+
+.pipeline-action-tag {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-bone-light);
+    border: 1.5px solid var(--color-ink);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--color-ink);
+}
+
+.pipeline-action-tag .jump-arrow {
+    color: var(--color-electric);
+    font-weight: 800;
+    font-size: 0.85rem;
+    transition: transform 0.15s ease;
+}
+
+.pipeline-card:hover .pipeline-action-tag .jump-arrow {
+    transform: translateX(3px);
+}
+
+.pipeline-footer-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-bone-light);
+    border: var(--border-width) solid var(--color-ink);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-hard-sm);
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    color: var(--color-ink-soft);
+}
+
+.pipeline-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 14px;
+}
+
+/* ==========================================================================
+   16:9 SCREENSHOT SHOWCASE LAYOUT
+   ========================================================================== */
+.slide-showcase-16x9 {
+    grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.35fr);
+    align-items: center;
+}
+
+.slide-showcase-16x9 .pzn-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.screenshot-window.window-16x9 {
+    min-height: 0;
+    width: 100%;
+}
+
+.screenshot-window.window-16x9 .window-content {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    width: 100%;
+    overflow: hidden;
+    background: #0f121a;
+}
+
+.screenshot-window.window-16x9 .screenshot-real-img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: top center;
+}

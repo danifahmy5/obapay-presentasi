@@ -1,0 +1,241 @@
+/* ==========================================================================
+   PRESENTATION LAYOUT: NAVBAR, CANVAS STAGE, FOOTER & NOTES DRAWER
+   ========================================================================== */
+        /* Top Header Navbar - PZN Style */
+        header.pzn-navbar {
+            background: var(--color-paper);
+            border-bottom: var(--border-width) solid var(--color-ink);
+            padding: 12px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 2px 0 var(--color-ink);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-pzn-tag {
+            background: var(--color-electric);
+            color: var(--color-paper);
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 0.85rem;
+            padding: 6px 12px;
+            border-radius: var(--border-radius-sm);
+            border: var(--border-width) solid var(--color-ink);
+            box-shadow: var(--shadow-hard-sm);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .brand-title-wrap {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: var(--color-ink);
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        .brand-subtitle {
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+            color: var(--color-ink-muted);
+            font-weight: 500;
+        }
+
+        .navbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        main.presentation-stage {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            max-width: 1440px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .slide-canvas {
+            width: 100%;
+            background: var(--color-paper);
+            border: var(--border-width) solid var(--color-ink);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-hard-lg);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 560px;
+            position: relative;
+        }
+
+        .slide-content-wrap {
+            padding: 20px 32px;
+            flex: 1;
+            display: none;
+            flex-direction: column;
+            animation: fadeInSlide 0.25s ease-out;
+        }
+
+        .slide-content-wrap.active {
+            display: flex;
+        }
+
+        /* Slide Top Meta */
+        .slide-top-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: var(--border-width) solid var(--color-bone);
+        }
+
+        .slide-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: var(--border-width) solid var(--color-ink);
+            box-shadow: 2px 2px 0 var(--color-ink);
+            background: var(--color-acid);
+            color: var(--color-ink);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .slide-speaker-tag {
+            font-family: var(--font-display);
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--color-ink-soft);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .slide-heading {
+            font-family: var(--font-display);
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--color-ink);
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+            margin-bottom: 6px;
+        }
+
+        /* Presenter Notes Drawer */
+        .presenter-notes-box {
+            background: var(--color-ink);
+            color: var(--color-paper);
+            border-top: var(--border-width) solid var(--color-ink);
+            padding: 16px 36px;
+            transition: all 0.25s ease;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .presenter-notes-box.collapsed {
+            max-height: 42px;
+            overflow: hidden;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .notes-header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .notes-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--color-acid);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .notes-body-text {
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* Bottom Navigation Bar */
+        footer.pzn-footer {
+            background: var(--color-paper);
+            border-top: var(--border-width) solid var(--color-ink);
+            padding: 12px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            bottom: 0;
+            z-index: 50;
+            box-shadow: 0 -2px 0 var(--color-ink);
+        }
+
+        .pzn-progress-track {
+            width: 260px;
+            height: 10px;
+            background: var(--color-bone);
+            border: 1.5px solid var(--color-ink);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .pzn-progress-fill {
+            height: 100%;
+            background: var(--color-electric);
+            width: 6.66%;
+            transition: width 0.25s ease;
+        }
+
+        .pzn-select {
+            background: var(--color-paper);
+            color: var(--color-ink);
+            border: var(--border-width) solid var(--color-ink);
+            box-shadow: 2px 2px 0 var(--color-ink);
+            padding: 6px 14px;
+            border-radius: var(--border-radius-sm);
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            outline: none;
+        }
