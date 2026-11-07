@@ -13,7 +13,7 @@ Anda dapat menyematkan tangkapan layar (screenshot) aplikasi **ObaPay** ke dalam
 
 ---
 
-## 📸 Daftar Nama File & Halaman Rujukan ObaPay (Slide 1 – 27)
+## 📸 Daftar Nama File & Halaman Rujukan ObaPay (Slide 1 – 29)
 
 ### 1. Pembuka & Tampilan Sistem
 | Slide | Nama File di `ppt/screenshots/` | Menu di ObaPay | URL / Route Lokal | Fokus Tangkapan Layar |
@@ -50,7 +50,7 @@ Anda dapat menyematkan tangkapan layar (screenshot) aplikasi **ObaPay** ke dalam
 
 ---
 
-### 4. Analitik, Kendali Biaya & Indikator Mutu Farmasi (Slide 19 – 25)
+### 4. Analitik, Kendali Biaya & Indikator Mutu Farmasi (Slide 19 – 26)
 | Slide | Nama File di `ppt/screenshots/` | Menu di ObaPay | URL / Route Lokal | Fokus Tangkapan Layar |
 |---|---|---|---|---|
 | **Slide 19** | `slide18-hpp-farmasi.png` | `Laporan → Laporan HPP` | `/reports/hpp` | Laporan HPP otomatis dengan kartu rumus baku akuntansi persediaan (*awal + beli - akhir = HPP Rp 31,45 Jt*) dan rincian per 35 item obat. |
@@ -60,16 +60,17 @@ Anda dapat menyematkan tangkapan layar (screenshot) aplikasi **ObaPay** ke dalam
 | **Slide 23** | `slide22-kepatuhan-formularium.png` | `Laporan → Penjualan → Penjualan Obat Formularium` | `/reports/sales/formularium-products` | Monitoring utilisasi formularium (F1, F2, F3) pada 5 gudang aktif, rekap 35 obat (266 terjual), dan ranking volume pemakaian obat. |
 | **Slide 24** | `slide23-respon-time-spm.png` | `Laporan → Pelayanan → Respon Time Antrian` | `/reports/queues/response-time` | Pencapaian SPM Kemenkes (76.2%), durasi granular per tahapan alur resep (menunggu, racik, cek, serah), dan analisis titik *bottleneck*. |
 | **Slide 25** | `slide24-ddd-antibiotika.png` | `Laporan → Penjualan → DDD Antibiotika` | `/reports/sales/antibiotic-ddd` | Laporan kuantitatif konsumsi antibiotik rawat inap metode WHO (DDD/100 hari rawat), agregat LOS, dan rincian per obat untuk program PPRA & akreditasi Starkes. |
+| **Slide 26** | `slide26-near-expiry.png` | `Laporan → Inventori → Near Expiry` | `/reports/inventory/expiry` | Deteksi obat mendekati kedaluwarsa (near expiry), obat expired, filter hari/gudang, serta kalkulasi nilai kerugian nominal HPP persediaan. |
 
 ---
 
-### 5. Arsitektur & Interoperabilitas Sistem (Slide 26 – 27)
+### 5. Arsitektur & Interoperabilitas Sistem (Slide 27 – 28)
 | Slide | Nama File di `ppt/screenshots/` | Menu di ObaPay | URL / Route Lokal | Fokus Tangkapan Layar |
 |---|---|---|---|---|
-| **Slide 26** | *(Tanpa Screenshot)* | `Integrasi ERM & SSO E-Resep` | — | Menggunakan visual diagram alur 3 langkah & kartu manfaat utama. |
-| **Slide 27** | *(Tanpa Screenshot)* | `Integrasi Sistem → API Peresepan E-Resep` | `/api/prescriptions` | Menggunakan visual grid 4 fitur interoperabilitas, keamanan Sanctum, & rute API gateway. |
+| **Slide 27** | *(Tanpa Screenshot)* | `Integrasi ERM & SSO E-Resep` | — | Menggunakan visual diagram alur 3 langkah & kartu manfaat utama. |
+| **Slide 28** | *(Tanpa Screenshot)* | `Integrasi Sistem → API Peresepan E-Resep` | `/api/prescriptions` | Menggunakan visual grid 4 fitur interoperabilitas, keamanan Sanctum, & rute API gateway. |
 
 ---
 
-### 6. Slide Penutup (Slide 27)
-*Slide 27 (Tanya Jawab & Diskusi) menggunakan layout kartu pertanyaan pemantik diskusi interaktif tanpa memerlukan tangkapan layar aplikasi.*
+### 6. Slide Penutup (Slide 29)
+*Slide 29 (Tanya Jawab & Diskusi) menggunakan layout kartu pertanyaan pemantik diskusi interaktif tanpa memerlukan tangkapan layar aplikasi.*

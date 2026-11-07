@@ -3,7 +3,7 @@
  * Single Source of Truth for Slides, Narrations, and Screenshots
  */
 
-const TOTAL_SLIDES = 28;
+const TOTAL_SLIDES = 29;
 
 const PRESENTER_NOTES = {
     1: "Dari Kebutuhan Operasional, Menuju Sistem Farmasi yang Terintegrasi. Obapay adalah sistem informasi yang dikembangkan untuk mendukung pelayanan farmasi dan pengelolaan persediaan obat secara lebih terstruktur, efisien, dan terintegrasi. Berawal dari pengalaman menggunakan sistem yang ada, berkembang menjadi solusi yang dirancang sesuai kebutuhan operasional rumah sakit.",
@@ -23,7 +23,7 @@ const PRESENTER_NOTES = {
     15: "Siklus B (Tahap 4): Pemeriksaan Akhir (Telaah Obat 5 Tepat & Double-Check). Pemeriksaan fisik independen sebelum obat diserahkan ke pasien, memverifikasi 5 Tepat (Pasien, Obat, Dosis, Rute, Waktu). Sistem mencatat timestamp pengecekan secara presisi serta tanda tangan digital apoteker pemeriksa untuk akreditasi KARS/JCI.",
     16: "Siklus B (Tahap 5): Penyerahan Obat (Handover) & Validasi Penerima. Dokumentasi serah-terima obat ke pasien merekam status Sudah Diserahkan, nama penerima, nomor telepon, dan petugas penyerah. Serta merekam jam penyerahan akhir (17:34) sebagai penutup siklus pelayanan dispensing farmasi.",
     17: "Siklus B (Tahap 6): Portal Edukasi Pasien Digital (WhatsApp). Pasien menerima tautan WhatsApp resmi untuk membuka portal edukasi obat interaktif rumah sakit. Memuat panduan cara minum obat yang aman, peringatan penting efek samping, serta video tutorial YouTube dan infografis visual ramah pasien.",
-    18: "Tujuh laporan pilihan yang dibahas pada slide berikutnya adalah HPP Farmasi, Stagnant Stock, Dead Stock, Resep BPJS & Obat Kronis, Kepatuhan Formularium, Response Time Farmasi, dan DDD Antibiotika. Secara keseluruhan, ObaPay memiliki 40+ jenis laporan yang mencakup penjualan, pembelian, inventori, keuangan, serta operasional lainnya. Akses laporan mengikuti hak pengguna.",
+    18: "Delapan laporan pilihan yang dibahas pada slide berikutnya adalah HPP Farmasi, Stagnant Stock, Dead Stock, Resep BPJS & Obat Kronis, Kepatuhan Formularium, Response Time Farmasi, DDD Antibiotika, dan Near Expiry. Secara keseluruhan, ObaPay memiliki 40+ jenis laporan yang mencakup penjualan, pembelian, inventori, keuangan, serta operasional lainnya. Akses laporan mengikuti hak pengguna.",
     19: "Laporan HPP Farmasi Realtime & Rumus Akuntansi: Menyajikan kalkulasi Harga Pokok Penjualan otomatis berbasis rumus baku persediaan: Persediaan Akhir Lalu (Rp 138,4 Jt) + Pembelian (Rp 55,8 Jt) − Persediaan Akhir Ini (Rp 162,8 Jt) = Total HPP (Rp 31,45 Jt). Dilengkapi tabel rincian HPP per obat, audit sumber data, dan export Excel.",
     20: "Laporan Stagnant Stock (Stok Lambat Berputar): Mengidentifikasi obat yang sisa persediaannya lebih besar dari transaksi penjualan selama 90 hari terakhir. Dashboard merangkum 15 obat lambat bergerak dengan modal tertahan sebesar Rp 167.769.500, memandu redistribusi stok antar depo satelit.",
     21: "Laporan Dead Stock (Stok Mati Nol Mutasi): Mendeteksi item obat tanpa mutasi penjualan sama sekali dalam periode 90 hari (seperti Fibrion dan Fondaparinux senilai Rp 55.650.000). Memilah metode pembayaran untuk percepatan negosiasi tukar guling batch atau retur distributor sebelum kedaluwarsa.",
@@ -31,9 +31,10 @@ const PRESENTER_NOTES = {
     23: "Laporan Kepatuhan & Penjualan Obat Formularium: Contoh periode 1–30 November 2026 dengan kategori BPJS, semua formularium, dan 5 gudang menampilkan 20 jenis obat serta 180 transaksi obat. Panel kepatuhan menggunakan rumus (F1 + F3) / (F1 + F3 + non formularium): (72 + 72) / (72 + 72 + 9) = 94,12%. Total 153 pada panel kepatuhan berbeda dari ringkasan 180 transaksi obat. Panel kepatuhan mengikuti periode dan kategori penjualan serta mencakup semua gudang; non formularium mengikuti kategori kunjungan dan mencakup pengajuan semua status. Tabel merinci kode, nama, formularium, dan transaksi tiap obat, dilengkapi cetak dan ekspor Excel.",
     24: "Laporan Response Time Antrian Pasien & SPM: Mengukur kepatuhan SPM Kemenkes dengan rata-rata total waktu 35.4 menit. Resep non-racik tercapai dalam 24.3 menit (target ≤ 30 menit, kepatuhan 83.3%) dan racikan 50.1 menit (target ≤ 60 menit, kepatuhan 66.7%), lengkap dengan analisis titik bottleneck di ruang peracikan.",
     25: "Laporan DDD Antibiotika: Laporan ini membantu rumah sakit memantau seberapa banyak antibiotik digunakan oleh pasien rawat inap agar pemakaiannya tetap bijak dan aman. Nilai pada layar dihitung otomatis oleh sistem: (1) Mengambil pasien yang pulang pada periode yang dipilih, yaitu 15 pasien dengan total 120 hari rawat inap (LOS) di mana lama rawat dihitung 1 kali per pasien agar tidak berlipat ganda; (2) Menghitung jumlah obat bersih yang dikonsumsi setelah dikurangi retur; (3) Nilai 25,62 per 100 hari rawat berarti dalam setiap 100 hari pasien menginap, rata-rata ada 25–26 hari pasien mengonsumsi dosis harian antibiotik. Informasi ini siap dicetak atau diekspor ke Excel untuk laporan mutu dan komite PPRA.",
-    26: "Integrasi ERM & Single Sign-On (SSO): Dokter cukup mengklik tombol 'Resep' pada ERM, sistem mengirimkan identitas dokter, pasien, dan kunjungan secara aman. ObaPay memvalidasi akses dan menyinkronkan data secara otomatis, lalu dokter langsung diarahkan ke form E-Resep dengan konteks yang sudah tersedia tanpa perlu login ulang. Solusi ini memberikan manfaat utama Single Sign-On (SSO), Zero Double Entry, Patient Context Safety, dan Seamless Workflow untuk mempercepat pelayanan rawat jalan.",
-    27: "Penjelasan API Peresepan (Interoperabilitas Dua Arah): ObaPay menyediakan konektivitas API yang memungkinkan ERM menyinkronkan data resep lengkap dengan obat dan racikan, memantau progres status pelayanan farmasi secara real-time, mengelola duplikasi resep serta pembatalan dengan otorisasi aman, dan mengakses katalog master obat beserta sisa stok dan informasi DDD. Dilengkapi keamanan RESTful API autentikasi Laravel Sanctum, format data JSON terstruktur, dan arsitektur siap interoperabilitas FHIR / SATUSEHAT.",
-    28: "“Mari kita diskusikan bersama: di titik mana proses saat ini paling sering mengalami hambatan, data apa yang paling sulit diperoleh dengan cepat, dan proses apa yang paling layak menjadi prioritas transformasi digital kita?”"
+    26: "Laporan Near Expiry & Expired (Obat Kadaluarsa): Menyediakan sistem peringatan dini (early warning system) untuk mendeteksi batch obat yang mendekati tanggal kedaluwarsa dengan parameter waktu yang fleksibel (default 90 hari) dan filter multi-gudang. ObaPay secara tegas memisahkan daftar Near Expiry (untuk diprioritaskan pengeluarannya sesuai FEFO atau ditukar guling ke PBF) dan daftar Expired (untuk segera dikarantina dari rak pelayanan guna menjamin keselamatan pasien). Sekaligus mengkalkulasi potensi nilai kerugian finansial berbasis HPP obat per batch.",
+    27: "Integrasi ERM & Single Sign-On (SSO): Dokter cukup mengklik tombol 'Resep' pada ERM, sistem mengirimkan identitas dokter, pasien, dan kunjungan secara aman. ObaPay memvalidasi akses dan menyinkronkan data secara otomatis, lalu dokter langsung diarahkan ke form E-Resep dengan konteks yang sudah tersedia tanpa perlu login ulang. Solusi ini memberikan manfaat utama Single Sign-On (SSO), Zero Double Entry, Patient Context Safety, dan Seamless Workflow untuk mempercepat pelayanan rawat jalan.",
+    28: "Penjelasan API Peresepan (Interoperabilitas Dua Arah): ObaPay menyediakan konektivitas API yang memungkinkan ERM menyinkronkan data resep lengkap dengan obat dan racikan, memantau progres status pelayanan farmasi secara real-time, mengelola duplikasi resep serta pembatalan dengan otorisasi aman, dan mengakses katalog master obat beserta sisa stok dan informasi DDD. Dilengkapi keamanan RESTful API autentikasi Laravel Sanctum, format data JSON terstruktur, dan arsitektur siap interoperabilitas FHIR / SATUSEHAT.",
+    29: "“Mari kita diskusikan bersama: di titik mana proses saat ini paling sering mengalami hambatan, data apa yang paling sulit diperoleh dengan cepat, dan proses apa yang paling layak menjadi prioritas transformasi digital kita?”"
 };
 
 const TYPEWRITER_PHRASES = [
@@ -373,6 +374,18 @@ const SCREENSHOT_CONFIG = [
         "guideIcon": "pill",
         "guideTarget": "Laporan DDD Antibiotika Rawat Inap (Metode WHO)",
         "guideInst": "Tampilan laporan DDD Antibiotika dengan filter periode tanggal pulang, total kunjungan (15), total LOS (120 hari), DDD per 100 hari rawat (25,62), dan tabel per item obat."
+    },
+    {
+        "key": "slide26-near-expiry",
+        "slide": 26,
+        "file": "slide26-near-expiry.png",
+        "title": "Laporan Near Expiry & Expired",
+        "menu": "Laporan → Inventori → Near Expiry",
+        "route": "/reports/inventory/expiry",
+        "guideBadge": "INVENTORI & MUTU",
+        "guideIcon": "clock",
+        "guideTarget": "Laporan Near Expiry & Expired",
+        "guideInst": "Tampilan laporan obat mendekati kadaluarsa (near expiry), obat expired, filter hari/gudang, dan kalkulasi nilai HPP batch."
     }
 ];
 

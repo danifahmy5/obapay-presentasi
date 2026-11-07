@@ -34,13 +34,16 @@ def build():
 
     # Read all slides
     slides_html = []
-    for i in range(1, 29):
+    i = 1
+    while True:
         slide_name = f'slides/slide{i:02d}.html'
         s_content = read_file(slide_name)
         if s_content:
             slides_html.append(s_content)
+            i += 1
         else:
-            print(f"Warning: {slide_name} not found!")
+            break
+    print(f"Loaded {len(slides_html)} slides.")
 
     all_slides = "\n\n".join(slides_html)
 

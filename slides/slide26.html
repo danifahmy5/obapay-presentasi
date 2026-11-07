@@ -1,126 +1,34 @@
 <div class="slide-content-wrap" data-slide="26">
-    <wave-background variant="1"></wave-background>
-    <slide-top-meta slide="26" badge="Arsitektur Integrasi: ERM SSO" icon="terminal" speaker="Arsitektur & Integrasi Sistem"></slide-top-meta>
-    <h1 class="slide-heading">Cara Kerja Single Sign-On (SSO) & Integrasi ERM ObaPay</h1>
-    <p class="slide-lead">Akses instan satu klik dari Rekam Medis Elektronik (ERM) ke modul E-Resep ObaPay secara aman, sinkron otomatis, dan tanpa login ulang.</p>
+    <wave-background variant="2"></wave-background>
+    <slide-top-meta slide="26" badge="Pengendalian Stok: Near Expiry" icon="clock" speaker="Manajemen Resiko & Mutu Farmasi"></slide-top-meta>
+    <h1 class="slide-heading">Laporan Near Expiry & Expired (Obat Kadaluarsa)</h1>
+    <p class="slide-lead">Peringatan dini deteksi obat mendekati kedaluwarsa dan pemisahan stok expired untuk mitigasi risiko kerugian serta keselamatan pasien.</p>
 
-    <!-- Diagram Alur Sederhana (3 Langkah Terintegrasi) -->
-    <div style="display: flex; align-items: stretch; gap: 14px; margin-top: 16px;">
-        <!-- Langkah 1: Inisiasi dari ERM -->
-        <div class="pzn-card pzn-card-bone" style="flex: 1; padding: 20px 22px; display: flex; flex-direction: column;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span class="card-tag tag-acid" style="margin: 0;">LANGKAH 01</span>
-                <span class="icon-svg" style="width: 22px; height: 22px; color: var(--color-ink);"><svg><use href="#icon-monitor"></use></svg></span>
-            </div>
-            <h3 style="font-family: var(--font-display); font-size: 1.12rem; font-weight: 700; color: var(--color-ink); margin-bottom: 10px; letter-spacing: -0.01em;">
-                1. Inisiasi dari ERM
-            </h3>
-            <p class="card-body-text" style="font-size: 0.9rem; line-height: 1.55; margin: 0; color: var(--color-ink-soft);">
-                Dokter klik tombol <strong>"Resep"</strong> pada ERM. Sistem mengirimkan identitas dokter, pasien, dan kunjungan secara aman.
+    <!-- Stage Detail & Screenshot Showcase -->
+    <div class="grid-2col slide-showcase-16x9" style="margin-top: 14px;">
+        <div class="pzn-card pzn-card-bone">
+            <span class="card-tag tag-orange">
+                <span class="icon-svg"><svg>
+                        <use href="#icon-clock"></use>
+                    </svg></span>
+                Early Warning & Patient Safety
+            </span>
+            <h3 class="card-title">Deteksi Obat Kedaluwarsa & Penyelamatan Aset</h3>
+            <p class="card-body-text" style="margin-bottom: 14px;">
+                <strong>Early Warning System (Filter Fleksibel):</strong> Mengidentifikasi batch obat dengan ambang batas hari expiry yang dapat disesuaikan (default 90 hari) lintas semua gudang aktif maupun per depo tertentu.<br><br>
+                <strong>Pemisahan Tegas Near Expiry vs Expired:</strong><br>
+                &bull; <em>Near Expiry:</em> Obat aktif mendekati ED diprioritaskan pengeluarannya (FEFO), didistribusikan ke unit berputaran cepat, atau ditukar guling ke PBF sebelum hangus.<br>
+                &bull; <em>Expired:</em> Obat melewati ED langsung terdeteksi untuk segera dikarantina dari rak dispensing demi menjamin <em>patient safety</em>.<br><br>
+                <strong>Transparansi Nilai Finansial (HPP &times; Stok):</strong> Menghitung otomatis potensi kerugian nominal persediaan berdasarkan HPP terakhir per nomor batch dan lokasi penyimpanan.
             </p>
-        </div>
 
-        <!-- Arrow Connector 1 -->
-        <div style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-            <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-electric); color: var(--color-paper); border: var(--border-width) solid var(--color-ink); box-shadow: var(--shadow-hard-sm); display: flex; align-items: center; justify-content: center;" title="Alur Data Terenkripsi">
-                <span class="icon-svg" style="width: 18px; height: 18px;"><svg><use href="#icon-arrow-right"></use></svg></span>
-            </div>
-        </div>
-
-        <!-- Langkah 2: Validasi & Sinkronisasi Otomatis -->
-        <div class="pzn-card pzn-card-bone" style="flex: 1; padding: 20px 22px; display: flex; flex-direction: column;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span class="card-tag tag-blue" style="margin: 0;">LANGKAH 02</span>
-                <span class="icon-svg" style="width: 22px; height: 22px; color: var(--color-electric);"><svg><use href="#icon-shield-check"></use></svg></span>
-            </div>
-            <h3 style="font-family: var(--font-display); font-size: 1.12rem; font-weight: 700; color: var(--color-ink); margin-bottom: 10px; letter-spacing: -0.01em;">
-                2. Validasi &amp; Sinkronisasi Otomatis
-            </h3>
-            <p class="card-body-text" style="font-size: 0.9rem; line-height: 1.55; margin: 0; color: var(--color-ink-soft);">
-                ObaPay memvalidasi akses, mengenali dokter, serta menyinkronkan data pasien dan kunjungan secara otomatis.
-            </p>
-        </div>
-
-        <!-- Arrow Connector 2 -->
-        <div style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-            <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-electric); color: var(--color-paper); border: var(--border-width) solid var(--color-ink); box-shadow: var(--shadow-hard-sm); display: flex; align-items: center; justify-content: center;" title="Buka E-Resep Terkunci Konteks">
-                <span class="icon-svg" style="width: 18px; height: 18px;"><svg><use href="#icon-arrow-right"></use></svg></span>
+            <div style="background: var(--color-paper); padding: 12px; border-radius: var(--border-radius-sm); font-size: 0.85rem; border: var(--border-width) solid var(--color-ink); box-shadow: var(--shadow-hard-sm); margin-top: auto;">
+                <div><strong>Menu di ObaPay:</strong> <span style="font-family: var(--font-mono);">Laporan → Inventori → Near Expiry</span></div>
+                <div style="margin-top: 4px;"><strong>Route URL:</strong> <code style="color: var(--color-electric); font-weight: 700;">/reports/inventory/expiry</code></div>
             </div>
         </div>
 
-        <!-- Langkah 3: Akses E-Resep Terintegrasi -->
-        <div class="pzn-card pzn-card-bone" style="flex: 1; padding: 20px 22px; display: flex; flex-direction: column;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span class="card-tag tag-mint" style="margin: 0;">LANGKAH 03</span>
-                <span class="icon-svg" style="width: 22px; height: 22px; color: var(--color-ink);"><svg><use href="#icon-file-text"></use></svg></span>
-            </div>
-            <h3 style="font-family: var(--font-display); font-size: 1.12rem; font-weight: 700; color: var(--color-ink); margin-bottom: 10px; letter-spacing: -0.01em;">
-                3. Akses E-Resep Terintegrasi
-            </h3>
-            <p class="card-body-text" style="font-size: 0.9rem; line-height: 1.55; margin: 0; color: var(--color-ink-soft);">
-                Dokter langsung diarahkan ke form E-Resep dengan konteks pasien dan kunjungan yang sudah tersedia, tanpa perlu login ulang.
-            </p>
-        </div>
-    </div>
-
-    <!-- Section Manfaat Utama -->
-    <div class="pzn-card" style="margin-top: 18px; padding: 18px 24px; background: var(--color-paper);">
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
-            <div style="display: flex; align-items: center; gap: 8px;">
-                <span class="card-tag tag-acid" style="margin: 0; font-size: 0.72rem;">NILAI STRATEGIS</span>
-                <span style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: var(--color-ink); letter-spacing: -0.01em;">
-                    MANFAAT UTAMA
-                </span>
-            </div>
-            <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--color-ink-muted);">
-                Single Sign-On • Zero Double Entry • Patient Safety
-            </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;">
-            <!-- Manfaat 1 -->
-            <div style="background: var(--color-bone-light); border: var(--border-width) solid var(--color-ink); border-radius: var(--border-radius-sm); padding: 14px 16px; box-shadow: var(--shadow-hard-sm); display: flex; flex-direction: column; gap: 4px;">
-                <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9rem; color: var(--color-ink);">
-                    <span class="icon-svg" style="width: 17px; height: 17px; color: var(--color-electric);"><svg><use href="#icon-check-circle"></use></svg></span>
-                    <span>Single Sign-On (SSO)</span>
-                </div>
-                <div style="font-size: 0.83rem; color: var(--color-ink-soft); line-height: 1.45; padding-left: 25px;">
-                    tanpa login ulang.
-                </div>
-            </div>
-
-            <!-- Manfaat 2 -->
-            <div style="background: var(--color-bone-light); border: var(--border-width) solid var(--color-ink); border-radius: var(--border-radius-sm); padding: 14px 16px; box-shadow: var(--shadow-hard-sm); display: flex; flex-direction: column; gap: 4px;">
-                <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9rem; color: var(--color-ink);">
-                    <span class="icon-svg" style="width: 17px; height: 17px; color: var(--color-electric);"><svg><use href="#icon-check-circle"></use></svg></span>
-                    <span>Zero Double Entry</span>
-                </div>
-                <div style="font-size: 0.83rem; color: var(--color-ink-soft); line-height: 1.45; padding-left: 25px;">
-                    tanpa input data berulang.
-                </div>
-            </div>
-
-            <!-- Manfaat 3 -->
-            <div style="background: var(--color-bone-light); border: var(--border-width) solid var(--color-ink); border-radius: var(--border-radius-sm); padding: 14px 16px; box-shadow: var(--shadow-hard-sm); display: flex; flex-direction: column; gap: 4px;">
-                <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9rem; color: var(--color-ink);">
-                    <span class="icon-svg" style="width: 17px; height: 17px; color: var(--color-electric);"><svg><use href="#icon-check-circle"></use></svg></span>
-                    <span>Patient Context Safety</span>
-                </div>
-                <div style="font-size: 0.83rem; color: var(--color-ink-soft); line-height: 1.45; padding-left: 25px;">
-                    meminimalkan risiko salah pasien.
-                </div>
-            </div>
-
-            <!-- Manfaat 4 -->
-            <div style="background: var(--color-bone-light); border: var(--border-width) solid var(--color-ink); border-radius: var(--border-radius-sm); padding: 14px 16px; box-shadow: var(--shadow-hard-sm); display: flex; flex-direction: column; gap: 4px;">
-                <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9rem; color: var(--color-ink);">
-                    <span class="icon-svg" style="width: 17px; height: 17px; color: var(--color-electric);"><svg><use href="#icon-check-circle"></use></svg></span>
-                    <span>Seamless Workflow</span>
-                </div>
-                <div style="font-size: 0.83rem; color: var(--color-ink-soft); line-height: 1.45; padding-left: 25px;">
-                    mempercepat pelayanan rawat jalan.
-                </div>
-            </div>
-        </div>
+        <!-- Screenshot Window (16:9) -->
+        <screenshot-window key="slide26-near-expiry" class="window-16x9"></screenshot-window>
     </div>
 </div>

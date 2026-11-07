@@ -28,6 +28,10 @@ const ZOOM_STEP = 0.1;
             }
 
             document.getElementById('currentSlideNum').innerText = currentSlide;
+            const totalSlideEl = document.getElementById('totalSlideNum');
+            if (totalSlideEl) {
+                totalSlideEl.innerText = TOTAL_SLIDES;
+            }
             document.getElementById('slideSelectDropdown').value = currentSlide;
             const progressPct = ((currentSlide) / TOTAL_SLIDES) * 100;
             document.getElementById('slideProgressFill').style.width = `${progressPct}%`;
